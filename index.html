@@ -10,8 +10,8 @@
 <meta name="twitter:image" content="https://visionairebioremedies.com/storage/page_uploads/854lGvYAjgLhusOPVli4Qc2vofakabt9whY3h6uR.webp">
 <link rel="canonical" href="https://visionairebioremedies.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+<link href="[https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800\&display=swap)" rel="stylesheet">
+<br>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -34,7 +34,7 @@
   "sameAs": ["https://visionairebioremedies.com"]
 }
 </script>
-
+<br>
 <style>
   :root{
     --pine-950:#0F2C22; --pine-700:#1F4E3D; --gold-500:#B8924A; --gold-100:#F5EEDD;
@@ -113,10 +113,103 @@
   footer{ background:#0b2119; color:rgba(255,255,255,.55); padding:26px 0; font-size:.82rem; text-align:center; }
   footer a{ color:rgba(255,255,255,.75); }
   .wa-float{ position:fixed; bottom:22px; right:22px; z-index:60; width:56px; height:56px; border-radius:50%; background:#25D366; display:flex; align-items:center; justify-content:center; box-shadow:0 8px 22px rgba(0,0,0,.25); }
+
+/* --- 3D / motion upgrade --- */
+html{scroll-behavior:smooth;}
+body{overflow-x:hidden;background:#fdfdfa;}
+a,button,.cat-tile,.product-card,.lead-form input,.lead-form select,.lead-form textarea{transition:all .28s ease;}
+.cursor-glow{position:fixed;inset:0;pointer-events:none;z-index:1;background:radial-gradient(420px circle at var(--mx,50%) var(--my,20%),rgba(184,146,74,.10),transparent 60%);}
+.main-nav{backdrop-filter:blur(14px);background:rgba(255,255,255,.86);}
+.main-nav.scrolled{box-shadow:0 16px 40px -30px rgba(15,44,34,.55);}
+.hero-3d{position:relative;min-height:calc(100vh - 116px);display:flex;align-items:center;overflow:hidden;background:radial-gradient(circle at 68% 42%,rgba(184,146,74,.17),transparent 23%),radial-gradient(circle at 86% 18%,rgba(31,78,61,.20),transparent 30%),linear-gradient(135deg,#fbfbf8 0%,#f4f7f3 48%,#edf3ef 100%);}
+.hero-3d:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(15,44,34,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(15,44,34,.05) 1px,transparent 1px);background-size:46px 46px;mask-image:linear-gradient(to bottom,transparent 0,#000 16%,#000 88%,transparent 100%);}
+.hero-grid{position:absolute;inset:0;background:radial-gradient(circle at 20% 80%,rgba(184,146,74,.10),transparent 28%);}
+#heroCanvas{position:absolute;inset:0;z-index:0;}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding:84px 20px 105px;}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(31,78,61,.16);border-radius:999px;padding:8px 13px;font-size:.72rem;letter-spacing:.14em;font-weight:800;color:var(--pine-700);background:rgba(255,255,255,.62);backdrop-filter:blur(10px);}
+.hero-copy h1{font-size:clamp(3.1rem,6vw,5.6rem);letter-spacing:-.055em;max-width:760px;margin:22px 0 20px;}
+.hero-copy h1 span{color:var(--gold-500);position:relative;display:inline-block;}
+.hero-copy h1 span:after{content:"";position:absolute;left:0;right:10%;bottom:-5px;height:2px;background:linear-gradient(90deg,var(--gold-500),transparent);}
+.hero-lead{font-size:1.12rem;line-height:1.8;max-width:680px;color:var(--text-body);}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:30px 0 38px;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 18px;border-radius:999px;font-size:.88rem;font-weight:800;border:1px solid transparent;}
+.btn-primary{background:var(--pine-950);color:#fff;box-shadow:0 20px 35px -18px rgba(15,44,34,.7);}
+.btn-primary:hover{transform:translateY(-3px);background:var(--pine-700);color:#fff;box-shadow:0 24px 42px -16px rgba(15,44,34,.45);}
+.btn-ghost{border-color:rgba(15,44,34,.18);background:rgba(255,255,255,.56);color:var(--pine-950);}
+.btn-ghost:hover{transform:translateY(-3px);border-color:var(--gold-500);background:#fff;color:var(--pine-950);}
+.hero-proof{display:flex;gap:26px;flex-wrap:wrap;}
+.hero-proof div{display:flex;flex-direction:column;gap:2px;}
+.hero-proof strong{font-size:1.55rem;line-height:1;color:var(--pine-950);}
+.hero-proof span{font-size:.76rem;color:var(--text-body);}
+.hero-orbit-card{position:relative;justify-self:end;width:min(530px,100%);aspect-ratio:1/1;border:1px solid rgba(255,255,255,.72);border-radius:38px;background:linear-gradient(145deg,rgba(255,255,255,.65),rgba(229,237,231,.34));box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 40px 100px -40px rgba(15,44,34,.36);overflow:hidden;transform-style:preserve-3d;perspective:1100px;}
+.hero-orbit-card:after{content:"";position:absolute;inset:12%;border-radius:50%;background:radial-gradient(circle,rgba(184,146,74,.12),transparent 60%);}
+.orbit-label{position:absolute;top:24px;left:26px;font-size:.67rem;letter-spacing:.18em;font-weight:800;color:rgba(15,44,34,.6);}
+.hero-core{position:absolute;inset:24%;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at 35% 25%,#fff 0%,#e7efe9 40%,#c4d5cb 100%);box-shadow:inset -18px -26px 45px rgba(15,44,34,.12),inset 14px 14px 24px rgba(255,255,255,.9),0 34px 54px -26px rgba(15,44,34,.44);transform:translateZ(70px);}
+.core-glow{position:absolute;width:46%;height:46%;border-radius:50%;background:rgba(184,146,74,.28);filter:blur(36px);}
+.core-logo{font-size:clamp(4rem,10vw,7rem);font-weight:900;letter-spacing:-.08em;color:var(--pine-950);line-height:.9;position:relative;}
+.core-logo span{color:var(--gold-500);}
+.hero-core span{position:relative;font-size:.82rem;font-weight:800;letter-spacing:.04em;color:var(--pine-700);}
+.orbit-ring{position:absolute;left:50%;top:50%;border:1px solid rgba(31,78,61,.2);border-radius:50%;transform:translate(-50%,-50%);transform-style:preserve-3d;}
+.ring-a{width:64%;height:64%;animation:spin 16s linear infinite;}
+.ring-b{width:83%;height:83%;border-color:rgba(184,146,74,.25);animation:spin-rev 20s linear infinite;}
+.orbit-dot{position:absolute;width:13px;height:13px;border-radius:50%;box-shadow:0 0 30px rgba(184,146,74,.5);background:var(--gold-500);z-index:2;}
+.dot-1{left:17%;top:29%;animation:float1 4.5s ease-in-out infinite;}
+.dot-2{right:16%;top:58%;animation:float2 5.2s ease-in-out infinite;}
+.dot-3{left:32%;bottom:16%;animation:float3 5.8s ease-in-out infinite;}
+.scroll-cue{position:absolute;z-index:3;left:50%;bottom:24px;transform:translateX(-50%);font-size:.7rem;text-transform:uppercase;letter-spacing:.14em;color:rgba(15,44,34,.6);display:flex;flex-direction:column;gap:6px;align-items:center;}
+.scroll-cue span{width:1px;height:40px;background:linear-gradient(to bottom,var(--gold-500),transparent);animation:scrollPulse 1.8s ease-in-out infinite;}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.8,.2,1);}
+.reveal.in-view{opacity:1;transform:translateY(0);}
+.cat-tile,.product-card{position:relative;transform-style:preserve-3d;will-change:transform;}
+.cat-tile:after,.product-card:after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(120deg,rgba(255,255,255,.35),transparent 35%,rgba(184,146,74,.12));opacity:0;transition:opacity .25s;}
+.cat-tile:hover:after,.product-card:hover:after{opacity:1;}
+.cat-tile .thumb img,.product-card .thumb img{transition:transform .65s cubic-bezier(.2,.8,.2,1);}
+.cat-tile:hover .thumb img,.product-card:hover .thumb img{transform:scale(1.06);}
+.product-row{perspective:1200px;}
+.product-card{background:linear-gradient(150deg,#fff,#f8faf7);box-shadow:0 18px 40px -34px rgba(15,44,34,.6);}
+.product-card:hover{box-shadow:0 30px 60px -38px rgba(15,44,34,.55);border-color:rgba(184,146,74,.5);}
+.stat-box{background:linear-gradient(145deg,#fff,#f4f7f3);box-shadow:0 20px 50px -35px rgba(15,44,34,.35);}
+.blog-item{transition:transform .25s ease,padding .25s ease;background:transparent;}
+.blog-item:hover{transform:translateX(7px);padding-left:8px;}
+.lead-section{position:relative;overflow:hidden;}
+.lead-section:before{content:"";position:absolute;inset:-30%;background:radial-gradient(circle at 85% 20%,rgba(184,146,74,.20),transparent 22%),radial-gradient(circle at 10% 90%,rgba(255,255,255,.08),transparent 22%);animation:drift 12s ease-in-out infinite alternate;}
+.lead-grid{position:relative;z-index:2;}
+.lead-form{box-shadow:0 35px 90px -44px rgba(0,0,0,.75);transform-style:preserve-3d;}
+.lead-form:hover{transform:translateY(-4px) rotateX(1deg);}
+.wa-float{animation:waPulse 2.2s ease-in-out infinite;transition:transform .25s ease,box-shadow .25s ease;}
+.wa-float:hover{transform:translateY(-4px) scale(1.06);animation:none;}
+@keyframes spin{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+@keyframes spin-rev{from{transform:translate(-50%,-50%) rotate(360deg)}to{transform:translate(-50%,-50%) rotate(0)}}
+@keyframes float1{50%{transform:translate(16px,-12px) scale(1.2)}}
+@keyframes float2{50%{transform:translate(-12px,18px) scale(.9)}}
+@keyframes float3{50%{transform:translate(12px,10px) scale(1.15)}}
+@keyframes scrollPulse{50%{opacity:.25;transform:scaleY(.7)}}
+@keyframes drift{from{transform:translate3d(-2%,-1%,0) scale(1)}to{transform:translate3d(3%,2%,0) scale(1.05)}}
+@keyframes waPulse{0%,100%{box-shadow:0 8px 22px rgba(0,0,0,.25),0 0 0 0 rgba(37,211,102,.35)}50%{box-shadow:0 8px 28px rgba(0,0,0,.28),0 0 0 12px rgba(37,211,102,0)}}
+@media (max-width:980px){
+  .hero-inner{grid-template-columns:1fr;padding-top:55px;}
+  .hero-orbit-card{justify-self:center;width:min(460px,92vw);}
+  .hero-copy{text-align:center;}
+  .hero-copy h1{margin-inline:auto;}
+  .hero-lead{margin-inline:auto;}
+  .hero-actions,.hero-proof{justify-content:center;}
+}
+@media (max-width:700px){
+  .hero-3d{min-height:auto;}
+  .hero-inner{padding:44px 20px 92px;gap:24px;}
+  .hero-copy h1{font-size:clamp(2.65rem,12vw,4rem);}
+  .hero-lead{font-size:1rem;}
+  .hero-orbit-card{border-radius:28px;}
+  .orbit-label{left:18px;top:18px;font-size:.58rem;}
+  .hero-proof{gap:18px;}
+  .hero-proof strong{font-size:1.25rem;}
+}
+
 </style>
+  <meta name="google-site-verification" content="K0lSZz3o45urpqSgadKv3FRfoelPrVPnY4noIsWAPiY" />
 </head>
 <body>
-
+<br>
 <div class="utility-bar">
   <div class="wrap">
     <span>WHO-GMP Certified · 500+ Franchise Partners Across 25+ States</span>
@@ -126,7 +219,7 @@
     </span>
   </div>
 </div>
-
+<br>
 <nav class="main-nav">
   <div class="wrap">
     <a class="logo" href="#top">Visionaire<span>.</span></a>
@@ -139,17 +232,17 @@
     </ul>
   </div>
 </nav>
-
+<br>
 <div class="breadcrumb">
   <div class="wrap"><a href="https://visionairebioremedies.com">Home</a> / PCD Pharma Franchise Catalog</div>
 </div>
-
+<br>
 <section class="intro-strip" id="top">
   <div class="wrap">
     <p>Visionaire Bio Remedies is a <a href="https://visionairebioremedies.com/about-us">WHO-GMP certified PCD Pharma Franchise company</a> and manufacturer, supplying Ophthalmic, ENT, and Oral Supplement products to franchise partners across India. Browse our <a href="https://visionairebioremedies.com/ophthalmic-products">Ophthalmic PCD Franchise</a> range, our <a href="https://visionairebioremedies.com/ent-products">ENT PCD Franchise</a> catalog, or explore area availability by submitting an enquiry below.</p>
   </div>
 </section>
-
+<br>
 <section id="categories">
   <div class="wrap">
     <h2 class="section-title">Shop by Category</h2>
@@ -170,7 +263,7 @@
     </div>
   </div>
 </section>
-
+<br>
 <section style="background:var(--off-white); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
   <div class="wrap">
     <h2 class="section-title">Featured Products</h2>
@@ -195,7 +288,7 @@
     </div>
   </div>
 </section>
-
+<br>
 <section>
   <div class="wrap about-grid">
     <div>
@@ -212,7 +305,7 @@
     </div>
   </div>
 </section>
-
+<br>
 <section id="blog" style="background:var(--off-white); border-top:1px solid var(--border);">
   <div class="wrap">
     <h2 class="section-title">From the Blog</h2>
@@ -224,7 +317,7 @@
     </div>
   </div>
 </section>
-
+<br>
 <section id="contact" class="lead-section">
   <div class="wrap lead-grid">
     <div class="lead-info">
@@ -257,14 +350,149 @@
     </form>
   </div>
 </section>
-
+<br>
 <footer>
   <div class="wrap"><p><a href="https://visionairebioremedies.com">Visionaire Bio Remedies</a> — WHO-GMP Certified PCD Pharma Franchise Company · © 2026</p></div>
 </footer>
-
+<br>
 <a class="wa-float" href="https://wa.me/919872219010" target="_blank" aria-label="Chat on WhatsApp">
   <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.06h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.15 8.15 0 0 1-1.26-4.38c0-4.5 3.66-8.16 8.17-8.16 2.18 0 4.23.85 5.77 2.39a8.1 8.1 0 0 1 2.39 5.78c0 4.5-3.67 8.17-8.08 8.17zm4.48-6.12c-.25-.12-1.45-.72-1.67-.8-.22-.08-.39-.12-.55.12-.16.25-.63.8-.77.96-.14.16-.29.18-.53.06-.25-.12-1.04-.38-1.99-1.22-.73-.65-1.23-1.46-1.37-1.71-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.32-.75-1.81-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.31-.22.25-.86.84-.86 2.04s.88 2.37 1 2.53c.12.16 1.73 2.64 4.2 3.7.59.25 1.05.4 1.41.52.59.19 1.13.16 1.55.1.47-.07 1.45-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.47-.28z"/></svg>
 </a>
+<br>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+  const root=document.documentElement;
+  let px=window.innerWidth*.5, py=window.innerHeight*.25;
+  window.addEventListener('pointermove',e=>{
+    px=e.clientX; py=e.clientY;
+    root.style.setProperty('--mx',px+'px');
+    root.style.setProperty('--my',py+'px');
+  },{passive:true});
+
+  // Pointer-responsive card tilt
+  document.querySelectorAll('.cat-tile,.product-card,.hero-orbit-card').forEach(card=>{
+    card.addEventListener('pointermove',e=>{
+      const r=card.getBoundingClientRect();
+      const x=(e.clientX-r.left)/r.width-.5;
+      const y=(e.clientY-r.top)/r.height-.5;
+      const amount=card.classList.contains('hero-orbit-card')?7:5;
+      card.style.transform=`perspective(1000px) rotateX(${(-y*amount).toFixed(2)}deg) rotateY(${(x*amount).toFixed(2)}deg) translateY(-2px)`;
+    });
+    card.addEventListener('pointerleave',()=>{
+      card.style.transform='';
+    });
+  });
+
+  // Reveal animations
+  const revealObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{ if(entry.isIntersecting){entry.target.classList.add('in-view'); revealObserver.unobserve(entry.target);} });
+  },{threshold:.14});
+  document.querySelectorAll('section, .cat-tile,.product-card,.about-grid>div,.blog-item,.lead-form,.stat-box').forEach(el=>{
+    el.classList.add('reveal');
+    revealObserver.observe(el);
+  });
+
+  // Sticky-nav state
+  const nav=document.querySelector('.main-nav');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>16),{passive:true});
+
+  // Count-up metrics
+  const counters=document.querySelectorAll('[data-count]');
+  const countObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(!entry.isIntersecting) return;
+      const el=entry.target, target=Number(el.dataset.count), suffix=el.textContent.includes('+')?'+':'';
+      let n=0, start=performance.now(), duration=1200;
+      const tick=t=>{
+        const p=Math.min((t-start)/duration,1);
+        n=Math.floor(target*(1-Math.pow(1-p,3)));
+        el.textContent=n+suffix;
+        if(p<1) requestAnimationFrame(tick); else el.textContent=target+suffix;
+      };
+      requestAnimationFrame(tick); countObserver.unobserve(el);
+    });
+  },{threshold:.8});
+  counters.forEach(c=>countObserver.observe(c));
+
+  // Lightweight Three.js 3D scene: pharmaceutical-inspired floating forms.
+  const mount=document.getElementById('heroCanvas');
+  if(!mount || !window.THREE) return;
+  const scene=new THREE.Scene();
+  const camera=new THREE.PerspectiveCamera(42,innerWidth/innerHeight,.1,100);
+  camera.position.set(0,0,10);
+  const renderer=new THREE.WebGLRenderer({alpha:true,antialias:true});
+  renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+  renderer.setSize(innerWidth,innerHeight);
+  mount.appendChild(renderer.domElement);
+
+  const group=new THREE.Group(); scene.add(group);
+  const hemi=new THREE.HemisphereLight(0xffffff,0x9ab3a5,1.4);
+  scene.add(hemi);
+  const key=new THREE.DirectionalLight(0xffffff,2.1); key.position.set(4,5,7); scene.add(key);
+  const fill=new THREE.PointLight(0xc7a35f,35,30); fill.position.set(-4,1,4); scene.add(fill);
+
+  const matA=new THREE.MeshPhysicalMaterial({color:0x174536,roughness:.2,metalness:.35,clearcoat:1,clearcoatRoughness:.18});
+  const matB=new THREE.MeshPhysicalMaterial({color:0xb8924a,roughness:.24,metalness:.5,clearcoat:1});
+  const matC=new THREE.MeshPhysicalMaterial({color:0xf8f8f2,roughness:.15,metalness:.05,transmission:.05,clearcoat:1});
+
+  const capsule=new THREE.Group();
+  const cyl=new THREE.CylinderGeometry(.33,.33,1.45,32);
+  const c1=new THREE.Mesh(cyl,matC); c1.rotation.z=Math.PI/2;
+  const c2=new THREE.Mesh(new THREE.SphereGeometry(.33,32,20),matA); c2.position.x=.72;
+  const c3=new THREE.Mesh(new THREE.SphereGeometry(.33,32,20),matB); c3.position.x=-.72;
+  capsule.add(c1,c2,c3);
+  capsule.rotation.set(.55,-.35,-.15); capsule.position.set(2.3,.8,.2); group.add(capsule);
+
+  const torus=new THREE.Mesh(new THREE.TorusGeometry(1.05,.08,20,80),matB);
+  torus.rotation.x=1.15; torus.position.set(1.1,-1.1,-.4); group.add(torus);
+
+  const vial=new THREE.Group();
+  const body=new THREE.Mesh(new THREE.CylinderGeometry(.48,.48,1.35,40),matA);
+  const neck=new THREE.Mesh(new THREE.CylinderGeometry(.28,.28,.35,32),matC); neck.position.y=.83;
+  const cap=new THREE.Mesh(new THREE.CylinderGeometry(.3,.3,.28,32),matB); cap.position.y=1.12;
+  vial.add(body,neck,cap); vial.rotation.z=.35; vial.rotation.x=-.45; vial.position.set(2.65,-.85,-.6); group.add(vial);
+
+  const particles=new THREE.Group(); scene.add(particles);
+  const pGeo=new THREE.SphereGeometry(.025,8,8);
+  for(let i=0;i<90;i++){
+    const m=new THREE.Mesh(pGeo, i%3===0?matB:(i%3===1?matA:matC));
+    const a=Math.random()*Math.PI*2, rad=3.3+Math.random()*4.3, y=(Math.random()-.5)*7;
+    m.position.set(Math.cos(a)*rad,(y*.45),Math.sin(a)*rad-4);
+    m.userData={speed:.15+Math.random()*.35,phase:Math.random()*6.28};
+    particles.add(m);
+  }
+
+  let targetX=0,targetY=0,rx=0,ry=0;
+  window.addEventListener('pointermove',e=>{
+    targetX=(e.clientX/innerWidth-.5)*.45;
+    targetY=(e.clientY/innerHeight-.5)*.28;
+  },{passive:true});
+
+  const clock=new THREE.Clock();
+  function animate(){
+    requestAnimationFrame(animate);
+    const t=clock.getElapsedTime();
+    rx += (targetY-rx)*.035; ry += (targetX-ry)*.035;
+    group.rotation.x=rx; group.rotation.y=ry+t*.035;
+    capsule.rotation.y=t*.45;
+    torus.rotation.z=t*.55; vial.rotation.y=-t*.35;
+    particles.rotation.y=t*.028;
+    particles.children.forEach((p,i)=>{
+      p.position.y += Math.sin(t*p.userData.speed+p.userData.phase)*0.0018;
+    });
+    renderer.render(scene,camera);
+  }
+  animate();
+
+  function resize(){
+    camera.aspect=innerWidth/innerHeight; camera.updateProjectionMatrix();
+    renderer.setSize(innerWidth,innerHeight);
+  }
+  window.addEventListener('resize',resize);
+})();
+</script>
 
 </body>
 </html>
